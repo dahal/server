@@ -12,6 +12,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="offset-by-three column six columns">
+        <div class="logo-container">
+          <center><%= image_tag("pleased-io.png", class: "responsive-image") %></center>
+        </div>
+        <%= yield %>
+
+        <div id="flash">
+          <% flash.each do |key, value| -%>
+            <div id="flash_<%= key %>"><%=h value %></div>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
   </body>
 </html>
