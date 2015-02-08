@@ -114,3 +114,8 @@ input[type="button"].button-brand:focus {
   font-size: 12px;
   display: inline-block;
 }
+
+.on-top {
+  z-index: 400;
+  position:relative;
+}
