@@ -9,8 +9,8 @@
       <% if signed_in? -%>
           <%= button_to 'Sign Out',sign_out_path, method: :delete, class: 'u-pull-right' %>
         <% else -%>
-        <a class="button button-primary u-pull-right button-primary" href="/signup">GET STARTED</a>
-          <%#= button_to 'GET STARTED', sign_up_path, method: :get, class: 'u-pull-right button-primary' %>
+        <a class="button button-brand u-pull-right" href="/signup">GET STARTED</a>
+          <%#= button_to 'GET STARTED', sign_up_path, method: :get, class: 'u-pull-right button-brand' %>
         <% end -%>
     </div>
   </div>
