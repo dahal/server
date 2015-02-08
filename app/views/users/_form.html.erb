@@ -1,8 +1,6 @@
 <%= form_for @user do |form| %>
   <%= form.text_field :email, type: 'email', class: 'u-full-width', placeholder: 'Email' %>
   <%= form.password_field :password, class: 'u-full-width', placeholder: 'Password' %>
-
   <%= form.submit %>
-
   <%= link_to t('.sign_in'), sign_in_path, class: 'enough-space' %>
 <% end %>

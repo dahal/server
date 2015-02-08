@@ -1,1 +1,30 @@
-<%= render partial: '/users/form' %>
+<div class="twelve columns">
+  <div class="logo-container">
+    <center><%= image_tag("pleased-io.png", class: "responsive-image max-width-100") %></center>
+    <hr>
+  </div>
+</div>
+
+<div class="row">
+  <div class="five columns">
+    <h4>Get Started</h4>
+    <%= render partial: '/users/form' %>
+
+    <div id="flash">
+      <% flash.each do |key, value| -%>
+        <div id="flash_<%= key %>"><%=h value %></div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="seven columns">
+    <div class="benifits">
+      <h4>Why Pleased?</h4>
+      <i class="ion-android-checkmark-circle icon-32 text-success inline"> </i> <h5 class="inline"> Try Before you Buy</h5>
+      <br>
+      <i class="ion-android-checkmark-circle icon-32 text-success inline"> </i> <h5 class="inline"> No Credit Card Required</h5>
+      <br>
+      <i class="ion-android-checkmark-circle icon-32 text-success inline"> </i> <h5 class="inline"> No Strings Attaced</h5>
+    </div>
+  </div>
+</div>

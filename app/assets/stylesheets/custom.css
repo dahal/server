@@ -1,6 +1,5 @@
 body {
   background-color: #ECECEC;
-  font-family: 'Muli', sans-serif;
 }
 
 .border {
@@ -54,10 +53,27 @@ body {
   color: #e74c3c;
 }
 
-.morphext > span {
-  display: none;
+.icon-32 {
+  font-size: 32px;
 }
 
-.morphext > .animated {
+.text-success {
+  color: #1abc9c;
+}
+
+.text-inactive {
+  color: #7f8c8d;
+}
+
+.benifits {
+  margin-left: 100px;
+  /*background-color: red;*/
+}
+
+.benifits h5 {
+  margin-left: 10px;
+}
+
+.inline {
   display: inline-block;
 }

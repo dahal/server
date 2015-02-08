@@ -16,6 +16,7 @@ gem 'clearance'
 gem 'enumerize'
 
 group :development, :test do
+  gem 'annotate'
   gem 'dotenv-rails'
   gem 'pry'
   gem 'web-console', '~> 2.0'

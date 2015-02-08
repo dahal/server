@@ -1,6 +1,19 @@
+<div class="offset-by-three column six columns">
+  <div class="logo-container">
+    <center><%= image_tag("pleased-io.png", class: "responsive-image max-width-100") %></center>
+  </div>
+  <%= form_for :password, url: passwords_path do |form| %>
+    <%= form.text_field :email, type: 'email', class: 'u-full-width', placeholder: 'Email' %>
+    <%= form.submit %>
+    <p class="center"><%= t '.description' %></p>
+  <% end %>
+  <i class="ion-ios-checkmark icon-48 text-success"></i>
+  <br>
+  <i class="ion-ios-checkmark-outline icon-48 text-inactive"></i>
 
-<%= form_for :password, url: passwords_path do |form| %>
-  <%= form.text_field :email, type: 'email', class: 'u-full-width', placeholder: 'Email' %>
-  <%= form.submit %>
-  <p class="center"><%= t '.description' %></p>
-<% end %>
+  <div id="flash">
+    <% flash.each do |key, value| -%>
+      <div id="flash_<%= key %>"><%=h value %></div>
+    <% end %>
+  </div>
+</div>
