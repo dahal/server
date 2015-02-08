@@ -1,0 +1,15 @@
+<div class="navigation">
+  <div class="u-pull-left fifty-percent">
+    <%= image_tag("pleased-io.png", class: "max-width-50 twenty-padding") %></a>
+  </div>
+
+  <div class="fifty-percent u-pull-right">
+    <div class="twenty-padding">
+      <% if signed_in? -%>
+          <%= button_to 'Sign Out',sign_out_path, method: :delete, class: 'u-pull-right' %>
+        <% else -%>
+          <%= button_to 'GET STARTED', sign_in_path, method: :get, class: 'u-pull-right button-primary' %>
+        <% end -%>
+    </div>
+  </div>
+</div>

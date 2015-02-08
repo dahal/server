@@ -13,7 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Added
 gem 'clearance'
-gem 'foundation-rails'
+gem 'enumerize'
 
 group :development, :test do
   gem 'dotenv-rails'

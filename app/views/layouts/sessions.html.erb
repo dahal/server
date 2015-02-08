@@ -6,6 +6,7 @@
 
     <title>Pleased.io</title>
 
+    <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -15,7 +16,7 @@
     <div class="container">
       <div class="offset-by-three column six columns">
         <div class="logo-container">
-          <center><%= image_tag("pleased-io.png", class: "responsive-image") %></center>
+          <center><%= image_tag("pleased-io.png", class: "responsive-image max-width-100") %></center>
         </div>
         <%= yield %>
 

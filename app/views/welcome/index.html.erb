@@ -1,2 +1,37 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<%= render 'shared/main_navigation' %>
+
+<div id="fullpage">
+  <div class="section active" id="main" style="background-image: url(responsive-devices1.png); background-repeat: no-repeat;">
+    <h1 class="brand-red center">Actionable Feedback in Minutes</h1>
+    <h4 class="center">Just plugin your <span id="email-providers" class="brand-red">Mandrill</span> account. We will do the rest.</h4>
+  </div>
+  <div class="section" id="signup">
+    <div class="offset-by-four column four columns">
+      <h4 class="center">Ready?</h4>
+      <h5 class="center">Lets get started</h5>
+      <%= render 'shared/sign_up_form' %>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#fullpage').fullpage({
+      anchors: ['About', 'Get Started'],
+      sectionsColor: ['#ECECEC','#EAE1C0'],
+      navigation: true,
+      navigationPosition: 'right',
+      navigationTooltips: ['About', 'Get Started']
+    });
+  });
+
+  (function(){
+    var words = [ 'Mandrill', 'SendGrid', 'Mailchimp' ], i = 0;
+    setInterval(function(){
+      $('#email-providers').fadeOut(function(){
+        $(this).html(words[i=(i+1)%words.length]).fadeIn();
+      });
+    }, 1000);
+  })();
+</script>
