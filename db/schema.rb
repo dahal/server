@@ -16,16 +16,17 @@ ActiveRecord::Schema.define(version: 20150208041954) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "campaigns", force: :cascade do |t|
-    t.string   "title",                       null: false
-    t.string   "description",     limit: 128
-    t.string   "brand_color"
-    t.string   "body_text_color"
-    t.string   "button_color"
-    t.string   "body_text",       limit: 128
-    t.string   "brand_logo",                  null: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+  create_table "surveys", force: :cascade do |t|
+    t.string   "company_name",      null: false
+    t.string   "email_from"
+    t.string   "reply_to_email"
+    t.string   "survey_subject"
+    t.string   "survey_body"
+    t.string   "survey_body_color"
+    t.string   "button_text_color"
+    t.string   "brand_logo"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "users", force: :cascade do |t|

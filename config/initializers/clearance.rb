@@ -12,7 +12,7 @@ Clearance.configure do |config|
   config.httponly = false
   config.mailer_sender = ENV['PLEADED_EMAIL_FROM']
   config.password_strategy = Clearance::PasswordStrategies::BCrypt
-  config.redirect_url = '/'
+  config.redirect_url = '/dashboard/surveys/new'
   config.secure_cookie = false
   config.sign_in_guards = []
   config.user_model = User

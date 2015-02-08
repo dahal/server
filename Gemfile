@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'clearance'
 gem 'enumerize'
 gem 'jquery-turbolinks'
+gem 'simple_form'
 
 group :development, :test do
   gem 'annotate'
