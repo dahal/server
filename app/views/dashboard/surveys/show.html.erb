@@ -2,23 +2,32 @@
 
 <!-- <h4>Preview</h4> -->
 <div class="row">
-  <div class="eight columns">
+  <div class="seven columns">
     <h6 class="center">Desktop Preview</h6>
     <div class="browser-mockup with-url" style="margin:0;">
-      <img src="http://placehold.it/600x500/fff/eee" />
-      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+      <!-- <img src="http://placehold.it/600x500/fff/eee" /> -->
+      <!-- <img src="https://www.filepicker.io/api/file/aOM0gTabRvK3nSHnlUdH" /> -->
+      <iframe src="https://www.filepicker.io/api/file/aOM0gTabRvK3nSHnlUdH" style="width: 100%; height: 730px;"></iframe>
     </div>
   </div>
 
-  <div class="four columns">
+  <div class="five columns">
     <h6 class="center">Mobile Preview</h6>
     <div class="browser-mockup" style="margin:0;">
-      <img src="http://placehold.it/600x1000/fff/eee" />
+      <img src="https://www.filepicker.io/api/file/aOM0gTabRvK3nSHnlUdH" style="width: 100%; height: 600px;" />
+      <!-- <iframe src="http://localhost:8000/email.html" style="width: 95%; height: 600px;"></iframe> -->
+    </div>
+
+    <div style="padding-top: 10px;">
+      <input class="u-full-width" type="email" placeholder="myemail@pleased.io">
+      <a href="#">Back to Edit</a>
+      <button class="u-pull-right">Send a Test Email</button>
     </div>
   </div>
 </div>
+
+<div class="row" style="padding-top: 50px;">
+  <center><button>Next : Import Users -></button></center>
+</div>
+
+<%= render 'shared/footer' %>
