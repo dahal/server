@@ -13,5 +13,6 @@
  *= require custom.scss
  *= require vendor/normalize.css
  *= require vendor/skeleton.css
+ *= require vendor/browser.css
  *= require_self
  */

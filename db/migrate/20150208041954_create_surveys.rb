@@ -9,6 +9,7 @@ class CreateSurveys < ActiveRecord::Migration
       t.string :survey_body_color
       t.string :button_text_color
       t.string :brand_logo
+      t.string :survey_hash
 
       t.timestamps null: false
     end

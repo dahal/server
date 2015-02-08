@@ -70,8 +70,18 @@ body {
   color: #7f8c8d;
 }
 
+.text-light {
+  color: #bdc3c7;
+}
+
 .text-brand {
   color: $brand-color
+}
+
+.footer{
+  padding-top: 40px;
+  padding-bottom: 15px;
+  bottom: 0;
 }
 
 /*Buttons----------------------------------*/

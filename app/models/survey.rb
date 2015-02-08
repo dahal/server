@@ -11,6 +11,7 @@
 #  survey_body_color :string
 #  button_text_color :string
 #  brand_logo        :string
+#  survey_hash       :string
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #

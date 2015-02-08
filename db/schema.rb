@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150208041954) do
     t.string   "survey_body_color"
     t.string   "button_text_color"
     t.string   "brand_logo"
+    t.string   "survey_hash"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
