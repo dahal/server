@@ -1,5 +1,5 @@
 class Dashboard::HomeController < Dashboard::BaseController
-  layout 'timeline'
+  layout 'dashboard'
 
   def new
   end
