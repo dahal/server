@@ -129,3 +129,28 @@ input[type="button"].button-brand:focus {
   z-index: 400;
   position:relative;
 }
+
+// For email preview
+div.email {
+  background-color:white;
+  width: 96%;
+  padding: 2%;
+}
+
+div.desktop {
+  height: 580px;
+}
+
+div.mobile {
+  height: 585px;
+  overflow: scroll;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.number-rating {
+
+  text-decoration: none;
+}
