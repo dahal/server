@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   draw :clearance
   draw :dashboard
 
+  get '/dashboard', to: 'dashboard/home#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
