@@ -1,3 +1,31 @@
-<div id="clearance" class="password-reset">
-  <p><%= t '.description' %></p>
+
+<div class="offset-by-three column six columns">
+  <div class="logo-container">
+    <center><%= link_to image_tag("pleased-io.png", class: "responsive-image max-width-100"), root_path %></center>
+  </div>
+
+  <hr>
+  <p><strong>Password Reset!</strong></p>
+
+  <div class="notification">
+    <div class="two columns">
+      <i class="ion-ios-information-outline icon-32"></i>
+    </div>
+
+    <div class="ten columns">
+      <p><%= t '.description' %></p>
+    </div>
+  </div>
+
+  <%= button_to 'Return to Login', sign_in_path %>
+  <hr>
+  <center><span class="small">Please make sure to check your spam folder if you did not receive an email.</span></center>
+
+  <div id="flash">
+    <% flash.each do |key, value| -%>
+      <div id="flash_<%= key %>"><%=h value %></div>
+    <% end %>
+  </div>
 </div>
+
+
