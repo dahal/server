@@ -1,10 +1,17 @@
 <%= render 'shared/main_navigation' %>
 
 <div id="fullpage">
-  <div class="section active" id="main" style="background-image: url(responsive-devices1.png); background-repeat: no-repeat;">
+  <!-- <div class="section active" id="main" style="background-image: url(main-background1.png); background-repeat: no-repeat; margin-top:200px;"> -->
+  <div class="section active" id="main">
     <div class="on-top">
       <h1 class="text-brand center">Actionable Feedback in Minutes</h1>
       <h4 class="center">Just plugin your <span id="email-providers" class="text-brand">Mandrill</span> account. We will do the rest.</h4>
+
+      <br>
+      <div class="offset-by-three six columns">
+        <!-- Mailchimp Subscribe -->
+        <%= render 'shared/mailchimp' %>
+      </div>
     </div>
   </div>
   <div class="section" id="signup">

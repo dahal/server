@@ -107,6 +107,28 @@ input[type="button"].button-brand:focus {
   background-color: $brand-color;
   border-color: $brand-color; }
 
+.button.button-brand-active,
+button.button-brand-active,
+input[type="submit"].button-brand-active,
+input[type="reset"].button-brand-active,
+input[type="button"].button-brand-active {
+  color: #FFF;
+  background-color: $brand-color;
+  border-color: $brand-color; }
+.button.button-brand-active:hover,
+button.button-brand-active:hover,
+input[type="submit"].button-brand-active:hover,
+input[type="reset"].button-brand-active:hover,
+input[type="button"].button-brand-active:hover,
+.button.button-brand-active:focus,
+button.button-brand-active:focus,
+input[type="submit"].button-brand-active:focus,
+input[type="reset"].button-brand-active:focus,
+input[type="button"].button-brand-active:focus {
+  color: $brand-color;
+  background-color: transparent;
+  border-color: $brand-color; }
+
 
 .benifits {
   margin-left: 100px;
