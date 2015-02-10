@@ -22,10 +22,11 @@
         </div>
         <hr>
         <p class="small">Subject: <strong><%= @survey.survey_subject %></strong></p>
-        <p class="devider" style="background-color: #FF5A5F; height: 3px"></p>
+        <p class="devider" style="background-color: <%= @survey.survey_body_color %>; height: 3px"></p>
         <div class="row">
           <div class="offset-by-four four columns">
-            <%= image_tag('logo.png', class: 'img-responsive') %>
+            <%#= image_tag('logo.png', class: 'img-responsive') %>
+            <img src="<%= @survey.brand_logo %>" class="img-responsive">
             <hr>
             <!-- <img src="http://500.co/uploads/logo-536aa95d4a95f41663a84cea.png" class="img-responsive"> -->
           </div>
@@ -43,8 +44,8 @@
             text-decoration: none;
             border-radius: 5px;
             padding: 7px;
-            color: #FF5A5F;
-            border: 2px solid #FF5A5F;
+            color: <%= @survey.survey_body %>;
+            border: 2px solid <%= @survey.survey_body %>;
           }
         </style>
         <p class="center">
@@ -89,10 +90,11 @@
         </div>
         <hr>
         <p class="small">Subject: <strong><%= @survey.survey_subject %></strong></p>
-        <p class="devider" style="background-color: #FF5A5F; height: 3px"></p>
+        <p class="devider" style="background-color: <%= @survey.survey_body_color %>; height: 3px"></p>
         <div class="row">
           <div class="offset-by-four four columns">
-            <%= image_tag('logo.png', class: 'img-responsive') %>
+            <%#= image_tag('logo.png', class: 'img-responsive') %>
+            <img src="<%= @survey.brand_logo %>" class="img-responsive">
             <hr>
             <!-- <img src="http://500.co/uploads/logo-536aa95d4a95f41663a84cea.png" class="img-responsive"> -->
           </div>
@@ -110,8 +112,8 @@
             text-decoration: none;
             border-radius: 5px;
             padding: 7px;
-            color: #FF5A5F;
-            border: 2px solid #FF5A5F;
+            color: <%= @survey.survey_body_color %>;
+            border: 2px solid <%= @survey.survey_body_color %>;
           }
 
           .for-mobile{
