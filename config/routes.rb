@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   draw :clearance
   draw :dashboard
+  draw :api
 
   get '/dashboard', to: 'dashboard/home#index'
 
