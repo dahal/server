@@ -11,23 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150208041954) do
+ActiveRecord::Schema.define(version: 20150212152131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "participants", force: :cascade do |t|
+    t.string   "email"
+    t.integer  "rating"
+    t.string   "feedback"
+    t.string   "feedback_url"
+    t.integer  "survey_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "surveys", force: :cascade do |t|
-    t.string   "company_name",      null: false
-    t.string   "email_from"
-    t.string   "reply_to_email"
+    t.string   "brand_name",                 null: false
+    t.string   "reply_to_email",             null: false
     t.string   "survey_subject"
-    t.string   "survey_body"
-    t.string   "survey_body_color"
-    t.string   "button_text_color"
+    t.string   "survey_body",    limit: 255
+    t.string   "brand_color"
     t.string   "brand_logo"
     t.string   "survey_hash"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.integer  "user_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,7 +46,7 @@ ActiveRecord::Schema.define(version: 20150208041954) do
     t.string   "encrypted_password", limit: 128, null: false
     t.string   "confirmation_token", limit: 128
     t.string   "remember_token",     limit: 128, null: false
-    t.string   "status"
+    t.integer  "state_enum"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
