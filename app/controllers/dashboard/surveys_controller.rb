@@ -7,8 +7,6 @@ class Dashboard::SurveysController < Dashboard::BaseController
 
   def create
     @survey = Survey.create(survey_params)
-    @survey.survey_hash = SecureRandom.urlsafe_base64.downcase
-    @survey.save
 
     redirect_to dashboard_survey_path(@survey.survey_hash)
   end
