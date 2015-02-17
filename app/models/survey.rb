@@ -21,6 +21,8 @@ class Survey < ActiveRecord::Base
   has_many :participants
   before_save :default_values
 
+  validates :brand_name, presence: true
+
   def default_values
     self.survey_hash ||= SecureRandom.urlsafe_base64.downcase
   end

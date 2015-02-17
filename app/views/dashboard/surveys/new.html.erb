@@ -8,20 +8,18 @@
 
     <br>
     <%= simple_form_for @survey, url: dashboard_surveys_path do |f| %>
-      <%= f.input :company_name, placeholder: 'Pleased.io', input_html: { class: 'u-full-width' } %>
-      <%= f.input :email_from, placeholder: 'Pleased.io Marketing', input_html: { class: 'u-full-width' } %>
+      <div class="row">
+        <div class="six columns">
+          <%= f.input :brand_name, placeholder: 'Pleased.io', input_html: { class: 'u-full-width' } %>
+        </div>
+        <div class="six columns">
+          <%= f.input :brand_color, input_html: { class: 'u-full-width' } %>
+        </div>
+      </div>
+
       <%= f.input :reply_to_email, placeholder: 'support@pleased.io', input_html: { class: 'u-full-width' } %>
       <%= f.input :survey_subject, placeholder: 'Would you recommend Pleased.io?', input_html: { class: 'u-full-width' } %>
       <%= f.input :survey_body, placeholder: 'How likely are you to recommend Pleased.io to a friend?',as: :text, input_html: { class: 'u-full-width' } %>
-      <div class="row">
-        <div class="six columns">
-          <%= f.input :survey_body_color, input_html: { class: 'u-full-width' } %>
-        </div>
-        <div class="six columns">
-          <%= f.input :button_text_color, input_html: { class: 'u-full-width' } %>
-        </div>
-
-      </div>
       <%= f.input :brand_logo, placeholder: 'Logo', input_html: { class: 'u-full-width' } %>
       <%= f.button :submit, 'Next: Preview ->', class: 'u-pull-right' %>
     <% end %>

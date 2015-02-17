@@ -6,13 +6,18 @@ class Dashboard::SurveysController < Dashboard::BaseController
   end
 
   def create
-    @survey = Survey.create(survey_params)
-
-    redirect_to dashboard_survey_path(@survey.survey_hash)
+    @survey = Survey.new(survey_params)
+    if @survey.save
+      # redirect_to dashboard_survey_path(@survey.survey_hash)
+      redirect_to dashboard_survey_path(@survey.id)
+    else
+      render :new
+    end
   end
 
   def show
-    @survey = Survey.where(survey_hash: params[:id]).first
+    # @survey = Survey.where(survey_hash: params[:id]).first
+    @survey = Survey.find(params[:id])
   end
 
   def update
