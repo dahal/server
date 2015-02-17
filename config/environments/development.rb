@@ -41,15 +41,13 @@ Rails.application.configure do
 
   # Configure the mailer to create full URLs in emails:
   # config/environments/{development,test}.rb
-  config.action_mailer.default_url_options = { host: ENV['DOMAIN'] }
-
-  config.action_mailer.default_url_options = { host: ENV['DOMAIN'], protocol: 'http' }
+  config.action_mailer.default_url_options = { host: Settings.app.domain, protocol: 'http' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     port:           587,
     address:        'smtp.mandrillapp.com',
-    user_name:      ENV['MANDRILL_USERNAME'],
-    password:       ENV['MANDRILL_PASSWORD'],
+    user_name:      Settings.mandrill.username,
+    password:       Settings.mandrill.password,
     authentication: :plain
   }
 end

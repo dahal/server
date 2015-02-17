@@ -1,8 +1,4 @@
 Clearance.configure do |config|
-end
-
-
-Clearance.configure do |config|
   config.allow_sign_up = true
   config.cookie_domain = '.example.com'
   config.cookie_expiration = lambda { |cookies| 1.year.from_now.utc }
@@ -10,7 +6,7 @@ Clearance.configure do |config|
   config.cookie_path = '/'
   config.routes = false
   config.httponly = false
-  config.mailer_sender = ENV['PLEADED_EMAIL_FROM']
+  config.mailer_sender = Settings.mandrill.from_email
   config.password_strategy = Clearance::PasswordStrategies::BCrypt
   config.redirect_url = '/dashboard/surveys/new'
   config.secure_cookie = false

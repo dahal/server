@@ -11,4 +11,9 @@
 /log/*
 !/log/.keep
 /tmp
-.env
+
+# Notes
+notes.md
+
+# Config files
+config/settings/*
