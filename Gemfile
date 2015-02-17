@@ -24,3 +24,7 @@ group :development, :test do
   gem 'spring'
   gem 'web-console', '~> 2.0'
 end
+
+group :development do
+  gem 'quiet_assets'
+end
