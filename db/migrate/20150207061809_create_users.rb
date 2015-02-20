@@ -7,9 +7,11 @@ class CreateUsers < ActiveRecord::Migration
       t.string :confirmation_token, limit: 128
       t.string :remember_token, limit: 128, null: false
       t.integer :state_enum
+      t.string :api_key
     end
 
     add_index :users, :email
     add_index :users, :remember_token
+    add_index :users, :api_key
   end
 end
