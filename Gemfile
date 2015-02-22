@@ -19,6 +19,7 @@ gem 'simple_form'
 
 group :development, :test do
   gem 'annotate'
+  gem 'dotenv-rails'
   gem 'faker'
   gem 'pry'
   gem 'spring'

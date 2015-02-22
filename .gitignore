@@ -16,4 +16,4 @@
 notes.md
 
 # Config files
-config/settings/*
+.env

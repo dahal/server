@@ -1,0 +1,10 @@
+app:
+  domain: ENV['DOMAIN']
+
+api:
+  base: ENV['API_BASE']
+
+mandrill:
+  username: ENV['MANDRILL_USERNAME']
+  password: ENV['MANDRILL_PASSWORD']
+  from_email: ENV['MANDRILL_FROM_EMAIL']
