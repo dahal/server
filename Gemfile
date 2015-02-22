@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.2.0'
 # Default
 gem 'rails', '4.2.0'
 gem 'pg'
@@ -28,4 +28,8 @@ end
 
 group :development do
   gem 'quiet_assets'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
