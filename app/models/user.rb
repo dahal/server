@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   has_one :survey
   before_create :generate_api_key
 
-  enumerize :state_enum, in: { active: 1, inactive: 2 }, default: :active, predicates: true, scope: true
+  enumerize :state_enum, in: { active: 1, inactive: 2 }, default: :active
 
   private
   def generate_api_key
