@@ -1,6 +1,9 @@
 puts 'Seeding Puru'
 User.create(email: 'puru@dahal.me', password: 'password', state_enum: :active)
 
+puts 'Seeding John'
+User.create(email: 'johnakersemail@gmail.com', password: 'password', state_enum: :active)
+
 # Seed 20 users
 puts 'Seed 20 Users'
 20.times do |n|
