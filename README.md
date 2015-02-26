@@ -17,7 +17,7 @@ Response
 - Basic HTTP Authentication
 
 ```bash
-$ curl http://api.pleased.io/v1 -H 'Authorization: Token token="80c0ce108fe7c0b89b7c999e2fbb6fff"'
+$ curl http://api.pleased.io/v1 -H 'Authorization: Token token="YOUR-API-KEY"'
 ```
 
 
@@ -61,15 +61,17 @@ Parameter | Example | Desctiption
 - Send the survey right away.
 
 ```bash
-$ curl http://api.pleased.io/v1/survey/send -H \
-      Authorization: Token token="80c0ce108fe7c0b89b7c999e2fbb6fff" \
-      "Content-Type: application/json" -X POST \
-     -d '{,"survey":"1001", "email":"fake@email.com"}'
+$ curl https://api.pleased.io/v1/survey/send \
+      -H 'Authorization: Token token="YOUR-API-KEY"' \
+      -H 'Content-Type: application/json' \
+      -d '{ "survey":"1001", "email":"fake@email.com" }'
 ```
+
 - Send email after certain time.
+
 ```bash
-$ curl http://api.pleased.io/v1/survey/send -H \
-      Authorization: Token token="80c0ce108fe7c0b89b7c999e2fbb6fff" \
-      "Content-Type: application/json" -X POST \
-     -d '{,"survey":"1001", "email":"fake@email.com", "wait_for": "2.days"}'
+$ curl https://api.pleased.io/v1/survey/send \
+      -H 'Authorization: Token token="YOUR-API-KEY"' \
+      -H 'Content-Type: application/json' \
+      -d '{ "survey":"1001", "email":"fake@email.com", "wait_for": "2.hours" }'
 ```
