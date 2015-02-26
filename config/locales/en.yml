@@ -20,4 +20,21 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      user: "Customer"
+    attributes:
+      user:
+        email: "Email address"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "cannot be empty"
+        participant:
+          attributes:
+            email:
+              blank: "cannot be empty!"
+            survey_id:
+              blank: "ID cannot be empty!"

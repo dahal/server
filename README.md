@@ -51,7 +51,7 @@ Parameter | Example | Desctiption
 --------- | ------- | ------------
 `token` | `80c0ce108fe7c0b89b7c999e2fbb6fff` | Api Key
 `email` | `customer@email.com` | Your Customer Email / Email To
-`survey`| `1001` | Survey ID, this ID is available after creating the survey.
+`survey_id`| `1001` | Survey ID, this ID is available after creating the survey.
 `wait_for` | `1.hour` or `2.days` | It allows you to wait before sending the survey. Accepts, day(s), week(s), month(s).
 
 
@@ -61,17 +61,17 @@ Parameter | Example | Desctiption
 - Send the survey right away.
 
 ```bash
-$ curl https://api.pleased.io/v1/survey/send \
+$ curl https://api.pleased.io/v1/send_survey \
       -H 'Authorization: Token token="YOUR-API-KEY"' \
       -H 'Content-Type: application/json' \
-      -d '{ "survey":"1001", "email":"fake@email.com" }'
+      -d '{ "survey_id":"1001", "email":"fake@email.com" }'
 ```
 
 - Send email after certain time.
 
 ```bash
-$ curl https://api.pleased.io/v1/survey/send \
+$ curl https://api.pleased.io/v1/send_survey \
       -H 'Authorization: Token token="YOUR-API-KEY"' \
       -H 'Content-Type: application/json' \
-      -d '{ "survey":"1001", "email":"fake@email.com", "wait_for": "2.hours" }'
+      -d '{ "survey_id":"1001", "email":"fake@email.com", "wait_for": "2.hours" }'
 ```

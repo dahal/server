@@ -13,4 +13,6 @@
 #
 
 class Participant < ActiveRecord::Base
+  validates :email, presence: true
+  validates :survey_id, presence: true
 end
