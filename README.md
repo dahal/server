@@ -31,3 +31,14 @@ Code | Status
 402 | Request Failed	Parameters were valid but request failed.
 404 | Not Found	The requested item doesn't exist.
 500, 502, 503, 504 | Server Errors	Something went wrong on our end.
+
+
+
+### Errors
+
+Types | Reason
+----------------------------- | --------------------------------------
+email_error | Not a valid email address.
+api_error | Temporary problem with our API.
+survey_error | Invalid Survey ID error.
+time_error | Invalid Time given.
