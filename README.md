@@ -49,9 +49,10 @@ time_error | Invalid Time given.
 
 Parameter | Example | Desctiption
 --------- | ------- | ------------
-token | 80c0ce108fe7c0b89b7c999e2fbb6fff | Api Key
-email | customer@email.com | Your Customer Email / Email To
-survey| 1001 | Survey ID, this ID is available after creating the survey.
+`token` | `80c0ce108fe7c0b89b7c999e2fbb6fff` | Api Key
+`email` | `customer@email.com` | Your Customer Email / Email To
+`survey`| `1001` | Survey ID, this ID is available after creating the survey.
+`wait_for` | `1.hour` or `2.days` | It allows you to wait before sending the survey. Accepts, day(s), week(s), month(s).
 
 
 
@@ -70,5 +71,5 @@ $ curl http://api.pleased.io/v1/survey/send -H \
 $ curl http://api.pleased.io/v1/survey/send -H \
       Authorization: Token token="80c0ce108fe7c0b89b7c999e2fbb6fff" \
       "Content-Type: application/json" -X POST \
-     -d '{,"survey":"1001", "email":"fake@email.com", "wait": "2.days"}'
+     -d '{,"survey":"1001", "email":"fake@email.com", "wait_for": "2.days"}'
 ```
