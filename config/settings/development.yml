@@ -2,7 +2,7 @@ app:
   domain: http://localhost:3000
 
 api:
-  base: ENV['API_BASE']
+  base: http://localhost:3000/v1
 
 mandrill:
   username: ENV['MANDRILL_USERNAME']
