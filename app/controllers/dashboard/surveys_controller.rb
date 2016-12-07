@@ -30,6 +30,18 @@ class Dashboard::SurveysController < Dashboard::BaseController
 
   private
   def survey_params
-    params.require(:survey).permit(:company_name, :email_from, :reply_to_email, :survey_subject, :survey_body, :survey_body_color, :button_text_color, :brand_logo)
+    params.require(:survey)
+          .permit(
+            :brand_name,
+            :brand_color,
+            :company_name,
+            :email_from,
+            :reply_to_email,
+            :survey_subject,
+            :survey_body,
+            :survey_body_color,
+            :button_text_color,
+            :brand_logo
+          )
   end
 end
